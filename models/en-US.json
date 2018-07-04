@@ -1,0 +1,41 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "coffee recipes",
+      "types": [
+
+      ],
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+
+          ]
+        },
+        {
+          "name": "SuggestionRecetteIntent",
+          "slots": [
+
+          ],
+          "samples": [
+            "hello",
+            "say hello",
+            "say hello world"
+          ]
+        }
+      ]
+    }
+  }
+}

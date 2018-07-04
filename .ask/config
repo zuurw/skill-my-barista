@@ -1,0 +1,41 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.9368a552-4309-4247-a3bf-505266eb9837",
+      "was_cloned": false,
+      "merge": {
+        "manifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "ask-custom-skill-coffee-recipes-default"
+              }
+            }
+          }
+        }
+      },
+      "resources": {
+        "manifest": {
+          "eTag": "ba2ea23ae960b6d14fce8b6ee00e814c"
+        },
+        "interactionModel": {
+          "en-US": {
+            "eTag": "59c0fe74ee98d1a3eedbc38ff3c8f42e"
+          }
+        },
+        "lambda": [
+          {
+            "arn": "arn:aws:lambda:us-east-1:352194809061:function:ask-custom-skill-coffee-recipes-default",
+            "functionName": "ask-custom-skill-coffee-recipes-default",
+            "awsRegion": "us-east-1",
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "revisionId": "33def9b4-3201-41bb-a1d7-832d1ec8be82"
+          }
+        ]
+      },
+      "in_skill_products": []
+    }
+  }
+}

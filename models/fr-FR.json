@@ -1,0 +1,43 @@
+{
+    "interactionModel": {
+      "languageModel": {
+        "invocationName": "recettes de café",
+        "types": [
+  
+        ],
+        "intents": [
+          {
+            "name": "AMAZON.CancelIntent",
+            "samples": [
+  
+            ]
+          },
+          {
+            "name": "AMAZON.HelpIntent",
+            "samples": [
+  
+            ]
+          },
+          {
+            "name": "AMAZON.StopIntent",
+            "samples": [
+  
+            ]
+          },
+          {
+            "name": "SuggestionRecetteIntent",
+            "slots": [
+  
+            ],
+            "samples": [
+              "que me conseilles tu",
+              "que me suggères tu",
+              "inspire moi",
+              "je ne sais pas quoi faire"
+            ]
+          }
+        ]
+      }
+    }
+  }
+  
