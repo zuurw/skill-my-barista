@@ -26,7 +26,7 @@ const CancelAndStopIntentHandler = {
     return Helpers.canHandleRequestWithIntents(handlerInput, Requests.INTENT_REQUEST, [Intents.CANCEL_INTENT, Intents.STOP_INTENT]);
   },
   handle(handlerInput) {
-    return Helpers.speak(handlerInput, Constants.EXIT_MESSAGES);
+    return Helpers.speak(handlerInput, Constants.EXIT_MESSAGES); 
   },
 };
 

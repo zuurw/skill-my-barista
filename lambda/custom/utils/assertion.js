@@ -37,7 +37,24 @@ module.exports = {
         expect(os.ssml).to.match(/^<speak>/); // startWith('<speak>');
         expect(os.ssml).to.match(/<\/speak>$/); //.endWith('</speak>');
     },
+    checkOutputSpeechContainsList(response, texts) {
 
+        expect(response).to.have.property("response");
+        let r = response.response;
+
+        expect(r).to.have.property("outputSpeech");
+        expect(r.outputSpeech).to.have.property("type");
+        expect(r.outputSpeech.type).to.equal('SSML');
+        expect(r.outputSpeech).to.have.property("ssml");
+
+        let os = r.outputSpeech;
+        let regexp = /^<speak>(.+?)<\/speak>$/;
+        let speechWithoutSsml = regexp.exec(os.ssml)[1];
+        console.log('speechWithoutSsml: ' + speechWithoutSsml);
+        expect(texts).to.contains(speechWithoutSsml);
+        expect(os.ssml).to.match(/^<speak>/); // startWith('<speak>');
+        expect(os.ssml).to.match(/<\/speak>$/); //.endWith('</speak>');
+    },
     checkOutputSpeachDoesNotContains(response, text) {
 
         expect(response).to.have.property("response");

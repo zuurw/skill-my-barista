@@ -3,8 +3,9 @@ const expect = require('chai').expect;
 const Skill = require('../index.js').handler;
 const Assertion = require('../utils/assertion.js');
 const request = require('./requests/test_intent_request_cancel_intent.json');
+const Constants = require('../constants.js');
 
-describe('skill-coffee-recipes Test - LaunchRequest', () => {
+describe('skill-coffee-recipes Test - IntentRequest CancelIntent', () => {
   before(() => {
     return new Promise((resolve, reject) => {
       Skill(request, null, (error, responseEnvelope) => {
@@ -22,7 +23,7 @@ describe('skill-coffee-recipes Test - LaunchRequest', () => {
     Assertion.checkOutputSpeech(skill_response);
   });
 
-  it('it closes the session ', () => {
-    Assertion.checkSessionStatus(skill_response, false);
+  it('it responses with one of sentences', () => {
+    Assertion.checkOutputSpeechContainsList(skill_response, Constants.EXIT_MESSAGES);
   });
 });
