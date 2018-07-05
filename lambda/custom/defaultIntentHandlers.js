@@ -1,17 +1,14 @@
-const Requests = require('requests.js');
-const Intents = require('intents.js');
-const Helpers = require('helpers.js');
-const Constants = require('constants.js');
+const Requests = require('./requests.js');
+const Intents = require('./intents.js');
+const Helpers = require('./helpers.js');
+const Constants = require('./constants.js');
 
 const LaunchRequestHandler = {
   canHandle(handlerInput) {
     return Helpers.canHandleRequest(handlerInput, Requests.LAUNCH_REQUEST);
   },
   handle(handlerInput) {
-    // const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
-    // const translatedWelcomeMessages = requestAttributes.t(Constants.WELCOME_MESSAGES);
-    console.log(Constants.WELCOME_MESSAGES);
-    return Helpers.speakWithRepromptAndSimpleCard(handlerInput, Helpers.getRandomItem(Constants.WELCOME_MESSAGES), Constants.WELCOME_REPROMPT, Constants.SKILL_NAME);
+    return Helpers.speakWithRepromptAndSimpleCard(handlerInput, Constants.WELCOME_MESSAGES, Constants.WELCOME_REPROMPTS, Constants.SKILL_NAME);
   },
 };
 
@@ -20,7 +17,7 @@ const HelpIntentHandler = {
     return Helpers.canHandleRequestWithIntents(handlerInput, Requests.INTENT_REQUEST, [Intents.HELP_INTENT]);
   },
   handle(handlerInput) {
-    return Helpers.speakWithReprompt(handlerInput, Constants.HELP_MESSAGE, Constants.HELP_REPROMPT);
+    return Helpers.speakWithReprompt(handlerInput, Constants.HELP_MESSAGES, Constants.HELP_REPROMPTS);
   },
 };
 

@@ -2,9 +2,8 @@
 /* eslint-disable  no-console */
 
 const Alexa = require('ask-sdk-core');
-const Helpers = require('helpers.js');
-const DefaultIntentHandlers = require('defaultIntentHandlers.js');
-const CustomIntentHandlers = require('customIntentHandlers.js');
+const DefaultIntentHandlers = require('./defaultIntentHandlers.js');
+const CustomIntentHandlers = require('./customIntentHandlers.js');
 
 
 

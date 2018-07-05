@@ -16,7 +16,7 @@ module.exports = {
         .withSimpleCard(skillName, message)
         .getResponse();
     },
-    speakWithReprompt(handlerInput, messages, reprompst) {
+    speakWithReprompt(handlerInput, messages, reprompts) {
         // const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
         return handlerInput.responseBuilder
         .speak(this.getRandomItem(messages))
@@ -31,8 +31,10 @@ module.exports = {
     },
     getRandomItem(arrayOfItems) {
         // the argument is an array [] of words or phrases
+        console.log('array of items: ' + arrayOfItems);
         let i = 0;
         i = Math.floor(Math.random() * arrayOfItems.length);
+        console.log('item: ' + arrayOfItems[i]);
         return (arrayOfItems[i]);
     }
 };
