@@ -2,7 +2,7 @@ require('mocha');
 const expect = require('chai').expect;
 const Skill = require('../index.js').handler;
 const Assertion = require('../utils/assertion.js');
-const request = require('./requests/test_launch_request.json');
+const request = require('./requests/test_intent_request_stop_intent.json');
 
 describe('skill-coffee-recipes Test - LaunchRequest', () => {
   before(() => {

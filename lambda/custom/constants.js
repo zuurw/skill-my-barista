@@ -16,7 +16,7 @@ module.exports = {
         HELP_MESSAGES: [
             'Voici l\'aide'
         ],
-        HELP_REPROMPT: [
+        HELP_REPROMPTS: [
             'Cela vous convient?'
         ],
         EXIT_MESSAGES: [
