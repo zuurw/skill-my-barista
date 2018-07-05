@@ -1,43 +1,154 @@
 {
     "interactionModel": {
       "languageModel": {
-        "invocationName": "recettes de café",
+        "invocationName": "mon barista",
         "types": [
-  
+            {
+              "name": "BOISSON",
+              "values": [
+                  {
+                      "name": {
+                          "value": "expresso"
+                      }
+                  },
+                  {
+                      "name": {
+                          "value": "ristretto"
+                      }
+                  },
+                  {
+                      "name": {
+                          "value": "lungo",
+                          "synonyms": [
+                              "long",
+                              "américain",
+                              "americano"
+                          ]
+                      }
+                  },
+                  {
+                      "name": {
+                          "value": "cappucino"
+                      }
+                  },
+                  {
+                      "name": {
+                          "value": "latte machiatto"
+                      }
+                  },
+                  {
+                      "name": {
+                          "value": "irish coffee"
+                      }
+                  },
+                  {
+                      "name": {
+                          "value": "coldbrew"
+                      }
+                  },
+                  {
+                      "name": {
+                          "value": "doppio",
+                          "synonyms": [
+                            "double expresso"
+                          ]
+                      }
+                  }
+              ]
+          }
         ],
         "intents": [
           {
             "name": "AMAZON.CancelIntent",
             "samples": [
-  
+              "annule",
+              "arrete"
             ]
           },
           {
             "name": "AMAZON.HelpIntent",
             "samples": [
-  
+              "que sais tu faire",
+              "que peux tu faire",
+              "qu es tu capable de faire",
+              "aide moi"
             ]
           },
           {
             "name": "AMAZON.StopIntent",
             "samples": [
-  
+              "stop",
+              "au revoir"
             ]
           },
           {
             "name": "SuggestionRecetteIntent",
             "slots": [
-  
             ],
             "samples": [
-              "que me conseilles tu",
-              "que me suggères tu",
-              "inspire moi",
-              "je ne sais pas quoi faire"
+              "conseille",
+              "conseiller",
+              "suggérer",
+              "conseil",
+              "suggestion",
+              "suggère",
+              "suggères",
+              "conseilles"
+            ]
+          },
+          {
+            "name": "RecetteSpecifiqueIntent",
+            "slots": [
+              {
+                "name": "boisson",
+                "type": "BOISSON",
+                "samples": [
+                    "un {boisson}",
+                    "le {boisson}",
+                    "{boisson}",
+                    "du {boisson}",
+                    "de la {boisson}"
+                ]
+              }
+            ],
+            "samples": [
+              "comment prépare t on {boisson}",
+              "comment prépare tu {boisson}",
+              "la recette {boisson}",
+              "prépare {boisson}"
+            ]
+          },
+          {
+            "name": "NombreRecetteIntent",
+            "samples": [
+              "combien de recettes",
+              "combien de boissons",
+              "combien de cafés",
+              "nombre de recettes",
+              "nombre de boissons",
+              "nombre de cafés"
             ]
           }
         ]
-      }
+      },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "RecetteSpecifiqueIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "boisson",
+                            "type": "BOISSON",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ]
+        }
     }
   }
   

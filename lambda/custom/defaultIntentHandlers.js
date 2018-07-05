@@ -8,7 +8,10 @@ const LaunchRequestHandler = {
     return Helpers.canHandleRequest(handlerInput, Requests.LAUNCH_REQUEST);
   },
   handle(handlerInput) {
-    return Helpers.speakWithRepromptAndSimpleCard(handlerInput, Constants.WELCOME_MESSAGE, Constants.WELCOME_REPROMPT, Constants.SKILL_NAME);
+    // const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
+    // const translatedWelcomeMessages = requestAttributes.t(Constants.WELCOME_MESSAGES);
+    console.log(Constants.WELCOME_MESSAGES);
+    return Helpers.speakWithRepromptAndSimpleCard(handlerInput, Helpers.getRandomItem(Constants.WELCOME_MESSAGES), Constants.WELCOME_REPROMPT, Constants.SKILL_NAME);
   },
 };
 
@@ -26,7 +29,7 @@ const CancelAndStopIntentHandler = {
     return Helpers.canHandleRequestWithIntents(handlerInput, Requests.INTENT_REQUEST, [Intents.CANCEL_INTENT, Intents.STOP_INTENT]);
   },
   handle(handlerInput) {
-    return Helpers.speak(handlerInput, Constants.EXIT_MESSAGE);
+    return Helpers.speak(handlerInput, Constants.EXIT_MESSAGES);
   },
 };
 

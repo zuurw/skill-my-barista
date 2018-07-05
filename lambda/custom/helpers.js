@@ -8,6 +8,7 @@ module.exports = {
         return request.type === expectedRequest && (expectedIntents.indexOf(request.intent.name) > -1);
     },
     speakWithRepromptAndSimpleCard(handlerInput, message, reprompt, skillName) {
+        // const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
         return handlerInput.responseBuilder
         .speak(message)
         .reprompt(reprompt)
@@ -15,14 +16,22 @@ module.exports = {
         .getResponse();
     },
     speakWithReprompt(handlerInput, message, reprompt) {
+        // const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
         return handlerInput.responseBuilder
         .speak(message)
         .reprompt(reprompt)
         .getResponse();
     },
     speak(handlerInput, message) {
+        // const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
         return handlerInput.responseBuilder
         .speak(message)
         .getResponse();      
+    },
+    getRandomItem(arrayOfItems) {
+        // the argument is an array [] of words or phrases
+        let i = 0;
+        i = Math.floor(Math.random() * arrayOfItems.length);
+        return (arrayOfItems[i]);
     }
 };
