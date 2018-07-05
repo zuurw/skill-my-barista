@@ -2,10 +2,10 @@ require('mocha');
 const expect = require('chai').expect;
 const Skill = require('../index.js').handler;
 const Assertion = require('../utils/assertion.js');
-const request = require('./requests/test_intent_request_stop_intent.json');
+const request = require('./requests/test_intent_request_suggestion_recette_intent.json');
 const Constants = require('../constants.js');
 
-describe('skill-coffee-recipes Test - IntentRequest StopIntent', () => {
+describe('skill-coffee-recipes Test - IntentRequest SuggestionRecetteIntent', () => {
   before(() => {
     return new Promise((resolve, reject) => {
       Skill(request, null, (error, responseEnvelope) => {
@@ -23,7 +23,8 @@ describe('skill-coffee-recipes Test - IntentRequest StopIntent', () => {
     Assertion.checkOutputSpeech(skill_response);
   });
 
-  it('it responses with one of sentences', () => {
-    Assertion.checkOutputSpeechContainsList(skill_response, Constants.EXIT_MESSAGES);
+  it('it responses with parsed text', () => {
+      console.log(skill_response);
+    Assertion.checkOutputSpeachDoesNotContains(skill_response, '{nom}');
   });
 });

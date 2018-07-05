@@ -9,7 +9,7 @@
             "Alexa demande à mon barista de me suggérer une boisson",
             "Alexa demande à mon barista comment préparer un Lungo"
           ],
-          "name": "skill-coffee-recipes",
+          "name": "Mon Barista",
           "description": "Mon Barista vous permet de retrouver les meilleures recettes de café : Ristretto, Capuccino ou encore Lungo, il connait beaucoup de recettes! Vous pouvez lui demander une recette en particulier, lui demander sa suggestion ou encore le nombre de recettes qu'il connaît. Mon barista vous dira les ingrédients à avoir pour la mise en place et vous enverra la recette complète sur votre application Alexa."
         }
       },
