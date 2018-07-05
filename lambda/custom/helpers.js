@@ -7,25 +7,26 @@ module.exports = {
         const request = handlerInput.requestEnvelope.request;
         return request.type === expectedRequest && (expectedIntents.indexOf(request.intent.name) > -1);
     },
-    speakWithRepromptAndSimpleCard(handlerInput, message, reprompt, skillName) {
+    speakWithRepromptAndSimpleCard(handlerInput, messages, reprompts, skillName) {
         // const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
+        const message = this.getRandomItem(messages);
         return handlerInput.responseBuilder
         .speak(message)
-        .reprompt(reprompt)
+        .reprompt(this.getRandomItem(reprompts))
         .withSimpleCard(skillName, message)
         .getResponse();
     },
-    speakWithReprompt(handlerInput, message, reprompt) {
+    speakWithReprompt(handlerInput, messages, reprompst) {
         // const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
         return handlerInput.responseBuilder
-        .speak(message)
-        .reprompt(reprompt)
+        .speak(this.getRandomItem(messages))
+        .reprompt(this.getRandomItem(reprompts))
         .getResponse();
     },
-    speak(handlerInput, message) {
+    speak(handlerInput, messages) {
         // const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
         return handlerInput.responseBuilder
-        .speak(message)
+        .speak(this.getRandomItem(messages))
         .getResponse();      
     },
     getRandomItem(arrayOfItems) {
