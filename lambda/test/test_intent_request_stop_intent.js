@@ -1,11 +1,11 @@
 require('mocha');
 const expect = require('chai').expect;
-const Skill = require('../index.js').handler;
-const Assertion = require('../utils/assertion.js');
-const request = require('./requests/test_intent_request_cancel_intent.json');
-const Constants = require('../constants.js');
+const Skill = require('../src/index.js').handler;
+const Assertion = require('../src/utils/assertion.js');
+const request = require('./requests/test_intent_request_stop_intent.json');
+const Constants = require('../src/constants.js');
 
-describe('skill-coffee-recipes Test - IntentRequest CancelIntent', () => {
+describe('skill-coffee-recipes Test - IntentRequest StopIntent', () => {
   before(() => {
     return new Promise((resolve, reject) => {
       Skill(request, null, (error, responseEnvelope) => {

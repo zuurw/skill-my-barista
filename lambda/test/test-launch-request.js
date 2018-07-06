@@ -1,11 +1,11 @@
 require('mocha');
 const expect = require('chai').expect;
-const Skill = require('../index.js').handler;
-const Assertion = require('../utils/assertion.js');
-const request = require('./requests/test_intent_request_help_intent.json');
-const Constants = require('../constants.js');
+const Skill = require('../src/index.js').handler;
+const Assertion = require('../src/utils/assertion.js');
+const request = require('./requests/test_launch_request.json');
+const Constants = require('../src/constants.js');
 
-describe('skill-coffee-recipes Test - IntentRequest HelpIntent', () => {
+describe('skill-coffee-recipes Test - LaunchRequest', () => {
   before(() => {
     return new Promise((resolve, reject) => {
       Skill(request, null, (error, responseEnvelope) => {
@@ -28,6 +28,6 @@ describe('skill-coffee-recipes Test - IntentRequest HelpIntent', () => {
   });
 
   it('it responses with one of sentences', () => {
-    Assertion.checkOutputSpeechContainsList(skill_response, Constants.HELP_MESSAGES);
+    Assertion.checkOutputSpeechContainsList(skill_response, Constants.WELCOME_MESSAGES);
   });
 });

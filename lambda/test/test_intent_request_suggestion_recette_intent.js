@@ -1,9 +1,9 @@
 require('mocha');
 const expect = require('chai').expect;
-const Skill = require('../index.js').handler;
-const Assertion = require('../utils/assertion.js');
+const Skill = require('../src/index.js').handler;
+const Assertion = require('../src/utils/assertion.js');
 const request = require('./requests/test_intent_request_suggestion_recette_intent.json');
-const Constants = require('../constants.js');
+const Constants = require('../src/constants.js');
 
 describe('skill-coffee-recipes Test - IntentRequest SuggestionRecetteIntent', () => {
   before(() => {
