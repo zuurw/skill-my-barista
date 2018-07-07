@@ -8,6 +8,7 @@
   "devDependencies": {
     "ask-cli": "^1.4.0",
     "chai": "^4.1.2",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "string-format": "^2.0.0"
   }
 }
