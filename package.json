@@ -4,7 +4,9 @@
   "description": "",
   "author": "",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "mocha-junit-reporter": "^1.17.0"
+  },
   "devDependencies": {
     "ask-cli": "^1.4.0",
     "chai": "^4.1.2",
