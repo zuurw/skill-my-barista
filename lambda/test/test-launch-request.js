@@ -1,7 +1,7 @@
 require('mocha');
 const expect = require('chai').expect;
 const Skill = require('../src/index.js').handler;
-const Assertion = require('../src/utils/assertion.js');
+const Assertion = require('./utils/assertion.js');
 const request = require('./requests/test_launch_request.json');
 const Constants = require('../src/constants.js');
 
