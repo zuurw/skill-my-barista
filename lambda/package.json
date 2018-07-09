@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test/*.js --timeout 15000",
-    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha test/*.js"
+    "test-reporter": "mocha test/*.js --timeout 15000 --reporter mocha-junit-reporter --reporter-options mochaFile=../test-results.xml",
+    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha test/*.js",
+    "coverage-reporter": "istanbul cover ./node_modules/mocha/bin/_mocha test/*.js --reporter mocha-junit-reporter --reporter-options mochaFile=../test-results.xml"
+
   },
   "author": "",
   "license": "ISC",
