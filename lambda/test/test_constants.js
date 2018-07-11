@@ -1,7 +1,7 @@
 require('mocha');
 const expect = require('chai').expect;
 const assert = require('chai').assert;
-const Constants = require('../src/constants.js');
+const Constants = require('../src/Constants.ts');
 
 describe('skill-coffee-recipes Test - Constants', () => {
     it('Constants SKILL_NAME must be defined', () => {

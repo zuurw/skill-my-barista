@@ -8,21 +8,26 @@
     "test-reporter": "mocha test/*.js --timeout 15000 --reporter mocha-junit-reporter --reporter-options mochaFile=../test-results.xml",
     "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha test/*.js",
     "coverage-reporter": "istanbul cover ./node_modules/mocha/bin/_mocha test/*.js --reporter mocha-junit-reporter --reporter-options mochaFile=../test-results.xml"
-
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ask-sdk-core": "^2.0.0",
-    "ask-sdk-model": "^1.0.0",
     "ask-cli": "^1.4.0",
-    "chai": "^4.1.2",
-    "mocha": "^5.2.0",
-    "string-format": "^2.0.0"
+    "ask-sdk": "^2.0.7",
+    "ask-sdk-core": "^2.0.0",
+    "ask-sdk-model": "^1.0.0"
   },
   "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.4",
+    "@types/node": "^10.5.2",
     "aws-lambda-mock-context": "^3.1.1",
+    "chai": "^4.1.2",
     "istanbul": "^0.4.5",
-    "mocha-junit-reporter": "^1.17.0"
+    "mocha": "^5.2.0",
+    "mocha-junit-reporter": "^1.17.0",
+    "string-format": "^2.0.0",
+    "ts-node": "^7.0.0",
+    "typescript": "^2.9.2"
   }
 }
