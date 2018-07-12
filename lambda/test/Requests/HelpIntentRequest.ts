@@ -1,3 +1,6 @@
+import { RequestEnvelope } from "ask-sdk-model";
+
+const jsonRequest =
 {
     "version": "1.0",
     "session": {
@@ -24,9 +27,16 @@
         }
     },
     "request": {
-        "type": "LaunchRequest",
+        "type": "IntentRequest",
         "requestId": "amzn1.echo-api.request.12345",
         "timestamp": "2018-07-05T08:11:35Z",
-        "locale": "fr-FR"
+        "locale": "fr-FR",
+		"intent": {
+			"name": "AMAZON.HelpIntent",
+			"confirmationStatus": "NONE"
+		}
     }
-}
+};
+
+const helpIntentRequest: RequestEnvelope = <RequestEnvelope>jsonRequest;
+export default helpIntentRequest;

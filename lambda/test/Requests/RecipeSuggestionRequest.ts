@@ -1,3 +1,6 @@
+import { RequestEnvelope } from "ask-sdk-model";
+
+const jsonRequest =
 {
 	"version": "1.0",
 	"session": {
@@ -34,4 +37,7 @@
 		},
 		"dialogState": "STARTED"
 	}
-}
+};
+
+const recipeSuggestionRequest: RequestEnvelope = <RequestEnvelope>jsonRequest;
+export default recipeSuggestionRequest;

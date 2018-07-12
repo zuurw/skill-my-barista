@@ -1,3 +1,6 @@
+import { RequestEnvelope } from "ask-sdk-model";
+
+const jsonRequest =
 {
     "version": "1.0",
     "session": {
@@ -24,13 +27,12 @@
         }
     },
     "request": {
-        "type": "IntentRequest",
+        "type": "LaunchRequest",
         "requestId": "amzn1.echo-api.request.12345",
         "timestamp": "2018-07-05T08:11:35Z",
-        "locale": "fr-FR",
-		"intent": {
-			"name": "AMAZON.CancelIntent",
-			"confirmationStatus": "NONE"
-		}
+        "locale": "fr-FR"
     }
-}
+};
+
+const launchRequest: RequestEnvelope = <RequestEnvelope>jsonRequest;
+export default launchRequest;

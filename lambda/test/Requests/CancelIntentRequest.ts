@@ -1,3 +1,6 @@
+import { RequestEnvelope } from 'ask-sdk-model';
+
+const jsonRequest = 
 {
     "version": "1.0",
     "session": {
@@ -29,8 +32,11 @@
         "timestamp": "2018-07-05T08:11:35Z",
         "locale": "fr-FR",
 		"intent": {
-			"name": "AMAZON.StopIntent",
+			"name": "AMAZON.CancelIntent",
 			"confirmationStatus": "NONE"
 		}
     }
-}
+};
+
+const cancelIntentRequest: RequestEnvelope = <RequestEnvelope>jsonRequest;
+export default cancelIntentRequest;

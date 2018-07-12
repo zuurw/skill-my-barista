@@ -14,7 +14,7 @@ export default class SessionEndedRequestLauncher implements RequestHandler {
         return this.handlersHelper.canHandleRequest(handlerInput, SESSION_ENDED_REQUEST); 
     }; 
     public async handle(handlerInput: HandlerInput): Promise<Response> {
-        console.log(`Session ended with reason: ${handlerInput.requestEnvelope.request.reason}`);
+        // console.log(`Session ended with reason: ${handlerInput.requestEnvelope.request.reason}`);
         return handlerInput.responseBuilder.getResponse();
     }
 };

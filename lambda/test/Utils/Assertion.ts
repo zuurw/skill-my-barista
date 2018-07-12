@@ -1,14 +1,18 @@
+'use strict';
 
-require('ask-sdk-model');
-const expect = require('chai').expect;
+import { interfaces, ResponseEnvelope, ui } from 'ask-sdk-model'
+import { expect } from 'chai';
 
-module.exports = {
-    checkResponseStructure(response) {
+export default class Assertion {
+
+    checkResponseStructure(response: ResponseEnvelope): void {
         expect(response).to.have.property("version");
         expect(response.version).to.be.equal("1.0");
         expect(response).to.have.property("response");
-    },
-    checkOutputSpeech(response) {
+    }
+
+    checkOutputSpeech(response: ResponseEnvelope): void {
+
         expect(response).to.have.property("response");
         let r = response.response;
 
@@ -17,12 +21,13 @@ module.exports = {
         expect(r.outputSpeech.type).to.equal('SSML');
         expect(r.outputSpeech).to.have.property("ssml");
 
-        let os = r.outputSpeech;
+        let os = <ui.SsmlOutputSpeech>r.outputSpeech;
 
         expect(os.ssml).to.match(/^<speak>/); // startWith('<speak>');
         expect(os.ssml).to.match(/<\/speak>$/); //.endWith('</speak>');
-    },
-    checkOutputSpeechContains(response, text) {
+    }
+
+    checkOutputSpeachContains(response: ResponseEnvelope, text: string): void {
 
         expect(response).to.have.property("response");
         let r = response.response;
@@ -32,12 +37,13 @@ module.exports = {
         expect(r.outputSpeech.type).to.equal('SSML');
         expect(r.outputSpeech).to.have.property("ssml");
 
-        let os = r.outputSpeech;
+        let os = <ui.SsmlOutputSpeech>r.outputSpeech;
         expect(os.ssml).to.contains(text);
         expect(os.ssml).to.match(/^<speak>/); // startWith('<speak>');
         expect(os.ssml).to.match(/<\/speak>$/); //.endWith('</speak>');
-    },
-    checkOutputSpeechContainsList(response, texts) {
+    }
+
+    checkOutputSpeechContainsList(response: ResponseEnvelope, texts: string[]) {
 
         expect(response).to.have.property("response");
         let r = response.response;
@@ -47,15 +53,16 @@ module.exports = {
         expect(r.outputSpeech.type).to.equal('SSML');
         expect(r.outputSpeech).to.have.property("ssml");
 
-        let os = r.outputSpeech;
+        let os = <ui.SsmlOutputSpeech>r.outputSpeech;
         let regexp = /^<speak>(.+?)<\/speak>$/;
         let speechWithoutSsml = regexp.exec(os.ssml)[1];
         console.log('speechWithoutSsml: ' + speechWithoutSsml);
         expect(texts).to.contains(speechWithoutSsml);
         expect(os.ssml).to.match(/^<speak>/); // startWith('<speak>');
         expect(os.ssml).to.match(/<\/speak>$/); //.endWith('</speak>');
-    },
-    checkOutputSpeachDoesNotContains(response, text) {
+    }
+
+    checkOutputSpeachDoesNotContains(response: ResponseEnvelope, text: string): void {
 
         expect(response).to.have.property("response");
         let r = response.response;
@@ -65,13 +72,13 @@ module.exports = {
         expect(r.outputSpeech.type).to.equal('SSML');
         expect(r.outputSpeech).to.have.property("ssml");
 
-        let os = r.outputSpeech;
+        let os = <ui.SsmlOutputSpeech>r.outputSpeech;
         expect(os.ssml).to.not.contains(text);
         expect(os.ssml).to.match(/^<speak>/); // startWith('<speak>');
         expect(os.ssml).to.match(/<\/speak>$/); //.endWith('</speak>');
-    },
+    }
 
-    checkSessionStatus(response, shouldEndSession) {
+    checkSessionStatus(response: ResponseEnvelope, shouldEndSession: boolean): void {
         let r = response.response;
         expect(r).to.have.property("shouldEndSession");
         if (shouldEndSession) {
@@ -79,17 +86,17 @@ module.exports = {
         } else {
             expect(r.shouldEndSession).to.be.false;
         }
-    },
+    }
 
-    checkStandardCard(response) {
+    checkStandardCard(response: ResponseEnvelope): void {
         let r = response.response;
         expect(r).to.have.property("card");
         expect(r.card.type).to.equal('Standard');
-        expect((r.card).text).to.not.be.equal('');
-        expect((r.card).title).to.not.be.equal('');
-    },
+        expect((<ui.StandardCard>r.card).text).to.not.be.equal('');
+        expect((<ui.StandardCard>r.card).title).to.not.be.equal('');
+    }
 
-    checkReprompt(response) {
+    checkReprompt(response: ResponseEnvelope): void {
         expect(response).to.have.property("response");
         let r = response.response;
 
@@ -98,19 +105,19 @@ module.exports = {
         expect(r.reprompt.outputSpeech).to.have.property("type");
         expect(r.reprompt.outputSpeech.type).to.equal('SSML');
         expect(r.reprompt.outputSpeech).to.have.property("ssml");
-        let os = r.reprompt.outputSpeech;
+        let os = <ui.SsmlOutputSpeech>r.reprompt.outputSpeech;
         expect(os.ssml).to.match(/^<speak>/); // startWith('<speak>');
         expect(os.ssml).to.match(/<\/speak>$/); //.endWith('</speak>');
 
-    },
+    }
 
-    checkNoReprompt(response) {
+    checkNoReprompt(response: ResponseEnvelope): void {
         expect(response).to.have.property("response");
         let r = response.response;
         expect(r).to.not.have.property("reprompt");
-    },
+    }
 
-    checkAudioPlayDirective(response) {
+    checkAudioPlayDirective(response : ResponseEnvelope) : void {
         let r = response.response;
         expect(r).to.have.property("directives");
         expect(r.directives).to.have.lengthOf(1);
@@ -119,7 +126,7 @@ module.exports = {
         expect(d).to.have.property("type");
         expect(d.type).to.equal("AudioPlayer.Play");
   
-        let app = d;
+        let app = <interfaces.audioplayer.PlayDirective>d;
         expect(app).to.have.property("playBehavior");
         expect(app.playBehavior).to.be.equal("REPLACE_ALL");
         expect(app).to.have.property("audioItem");
