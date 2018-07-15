@@ -1,6 +1,12 @@
 "use strict";
 
 export const SKILL_NAME = "Mon Barista";
+export const ERROR_MESSAGES = [
+  "Sorry, I can't understand the command. Please say again."
+];
+export const ERROR_REPROMPTS = [
+  "Sorry, I can't understand the command. Please say again."
+];
 export const WELCOME_MESSAGES = [
   "Bonjour! Que faisons nous aujourd'hui?",
   "Bonjour! Qu'allons nous préparer aujourd'hui?",

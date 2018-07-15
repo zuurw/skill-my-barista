@@ -1,6 +1,6 @@
-import MessagesHelper from './MessagesHelper';
 import { RECIPE_NAMES, RECIPE_INGREDIENTS, RECIPE_STEPS } from '../Data';
 import Recipe from '../Models/Recipe';
+import { MessagesHelper } from '../../../../skill-lilasoft-toolkit/dist/src';
 
 export default class RecipesHelper {
     messagesHelper: MessagesHelper;

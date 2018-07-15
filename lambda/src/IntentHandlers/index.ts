@@ -1,4 +1,4 @@
-import CancelAndStopIntentHandler from "./CancelAndStopIntentHandler";
+import CancelAndStopIntentHandler from "./CancelIntentHandler";
 import HelpIntentHandler from "./HelpIntentHandler";
 import NumberOfRecipesIntentHandler from "./NumberOfRecipesIntentHandler";
 import RecipeIntentHandler from "./RecipeIntentHandler";
