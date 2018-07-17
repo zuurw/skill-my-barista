@@ -8,9 +8,7 @@
         "sourceMap": true,
         "outDir": "dist/",
         "noUnusedLocals": false,
-        "noUnusedParameters": false        
-    },    
-    "include": [
-        "src/**/*.ts"
-    ]
+        "noUnusedParameters": false,
+        "declaration": true        
+    }
 }

@@ -1,0 +1,12 @@
+export declare const SKILL_NAME = "Mon Barista";
+export declare const ERROR_MESSAGES: string[];
+export declare const ERROR_REPROMPTS: string[];
+export declare const WELCOME_MESSAGES: string[];
+export declare const WELCOME_REPROMPTS: string[];
+export declare const HELP_MESSAGES: string[];
+export declare const HELP_REPROMPTS: string[];
+export declare const EXIT_MESSAGES: string[];
+export declare const SUGGESTION_RECETTE_MESSAGES: string[];
+export declare const INGREDIENTS_RECETTE_MESSAGES: string[];
+export declare const RECETTE_SPECIFIQUE_MESSAGES: string[];
+export declare const NOMBRE_RECETTE_MESSAGES: string[];
