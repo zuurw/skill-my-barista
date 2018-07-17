@@ -1,5 +1,5 @@
 import { EXIT_MESSAGES } from "../Constants";
-import { LilaRequestHandler, CANCEL_INTENT } from "../../../../skill-lilasoft-toolkit/dist/src";
+import { LilaRequestHandler, CANCEL_INTENT } from "skill-lilasoft-toolkit";
 
 export default class CancelIntentHandler extends LilaRequestHandler {   
     constructor() {

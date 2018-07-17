@@ -4,13 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -r ts-node/register test/*.ts --timeout 15000",
-    "test-reporter": "mocha ts-node/register test/*.ts --timeout 15000 --reporter mocha-junit-reporter --reporter-options mochaFile=../test-results.xml",
-    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha ts-node/register test/*.ts",
-    "coverage-reporter": "istanbul cover ./node_modules/mocha/bin/_mocha ts-node/register test/*.ts --reporter mocha-junit-reporter --reporter-options mochaFile=../test-results.xml"
+    "build": "tsc",
+    "test": "nyc mocha",
+    "coverage": "nyc --reporter=lcov --reporter=text-lcov mocha"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "ask-cli": "^1.4.0",
     "ask-sdk": "^2.0.7",
@@ -24,9 +23,11 @@
     "@types/node": "^10.5.2",
     "aws-lambda-mock-context": "^3.1.1",
     "chai": "^4.1.2",
+    "coveralls": "^3.0.2",
     "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
     "mocha-junit-reporter": "^1.17.0",
+    "skill-lilasoft-toolkit": "0.0.3",
     "string-format": "^2.0.0",
     "ts-node": "^7.0.0",
     "typescript": "^2.9.2"

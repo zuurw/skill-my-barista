@@ -1,5 +1,5 @@
 import { WELCOME_MESSAGES, WELCOME_REPROMPTS, SKILL_NAME } from "../Constants";
-import { LilaRequestHandler, LAUNCH_REQUEST } from "../../../../skill-lilasoft-toolkit/dist/src";
+import { LilaRequestHandler, LAUNCH_REQUEST } from "skill-lilasoft-toolkit";
 
 export default class LaunchRequestHandler extends LilaRequestHandler {
     constructor() {
