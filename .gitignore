@@ -1,5 +1,0 @@
-/test-results.xml
-node_modules/
-lambda/.nyc_output/
-lambda/node_modules/
-lambda/coverage/
