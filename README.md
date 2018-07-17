@@ -1,4 +1,4 @@
-# 'LilaSoft' Skill Toolkit
+# 'My Barista' Skill
 
 [![Build Status](https://travis-ci.org/Beowulf59000/skill-my-barista.svg?branch=master)](https://travis-ci.org/Beowulf59000/skill-my-barista)
 [![Coverage Status](https://coveralls.io/repos/github/Beowulf59000/skill-my-barista/badge.svg?branch=master)](https://coveralls.io/github/Beowulf59000/skill-my-barista?branch=master)
