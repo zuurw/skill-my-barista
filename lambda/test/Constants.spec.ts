@@ -2,7 +2,7 @@ import 'mocha';
 import {expect, assert } from 'chai';
 import { SKILL_NAME, WELCOME_MESSAGES, WELCOME_REPROMPTS, HELP_MESSAGES } from '../src/Constants';
 
-describe('skill-coffee-recipes Test - Constants', () => {
+describe('Constants', () => {
     it('Constants SKILL_NAME must be defined', () => {
         expect(SKILL_NAME).to.not.be.undefined;
     });
