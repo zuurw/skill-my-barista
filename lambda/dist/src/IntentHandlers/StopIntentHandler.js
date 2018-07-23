@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const Constants_1 = require("../Constants");
-const src_1 = require("../../../../skill-lilasoft-toolkit/dist/src");
-class CancelIntentHandler extends src_1.LilaRequestHandler {
+const skill_lilasoft_toolkit_1 = require("skill-lilasoft-toolkit");
+class StopIntentHandler extends skill_lilasoft_toolkit_1.LilaIntentHandler {
     constructor() {
-        super(src_1.STOP_INTENT, Constants_1.EXIT_MESSAGES, null);
+        super(skill_lilasoft_toolkit_1.STOP_INTENT, Constants_1.EXIT_MESSAGES);
     }
 }
-exports.default = CancelIntentHandler;
+exports.default = StopIntentHandler;
 ;
 //# sourceMappingURL=StopIntentHandler.js.map

@@ -16,7 +16,7 @@ const IntentHandlers_1 = require("./IntentHandlers");
 function handler(event, context, callback) {
     return __awaiter(this, void 0, void 0, function* () {
         const factory = ask_sdk_1.SkillBuilders.standard()
-            .addRequestHandlers(new Handlers_1.LaunchRequestHandler(), new IntentHandlers_1.HelpIntentHandler(), new IntentHandlers_1.CancelAndStopIntentHandler(), new Handlers_1.SessionEndedRequestHandler(), new IntentHandlers_1.RecipeSuggestionIntentHandler(), new IntentHandlers_1.RecipeIntentHandler(), new IntentHandlers_1.NumberOfRecipesIntentHandler())
+            .addRequestHandlers(new Handlers_1.LaunchRequestHandler(), new IntentHandlers_1.HelpIntentHandler(), new IntentHandlers_1.CancelIntentHandler(), new IntentHandlers_1.StopIntentHandler(), new Handlers_1.SessionEndedRequestHandler(), new IntentHandlers_1.RecipeSuggestionIntentHandler(), new IntentHandlers_1.RecipeIntentHandler(), new IntentHandlers_1.NumberOfRecipesIntentHandler())
             .addErrorHandlers(new Handlers_1.ErrorHandler());
         const skill = factory.create();
         try {

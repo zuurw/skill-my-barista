@@ -1,6 +1,6 @@
 'use strict';
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SUGGESTION_RECETTE_INTENT = 'SuggestionRecetteIntent';
-exports.RECETTE_SPECIFIQUE_INTENT = 'RecetteSpecifiqueIntent';
-exports.NOMBRE_RECETTE_INTENT = 'NombreRecetteIntent';
+exports.RECIPE_SUGGESTION_INTENT = 'RecipeSuggestionIntent';
+exports.SPECIFIC_RECIPE_INTENT = 'SpecificRecipeIntent';
+exports.NUMBER_OF_RECIPES_INTENT = 'NumberOfRecipesIntent';
 //# sourceMappingURL=Intents.js.map

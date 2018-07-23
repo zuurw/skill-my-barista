@@ -23,23 +23,23 @@ exports.WELCOME_REPROMPTS = [
 exports.HELP_MESSAGES = ["Voici l'aide"];
 exports.HELP_REPROMPTS = ["Cela vous convient?"];
 exports.EXIT_MESSAGES = ["Au revoir!", "Bonne journée!"];
-exports.SUGGESTION_RECETTE_MESSAGES = [
+exports.RECIPE_SUGGESTION_MESSAGES = [
     "Que diriez vous de faire {nom}?",
     "{nom}, ça vous dit?",
     "{nom} m'inspire aujourd'hui, pas vous?"
 ];
-exports.INGREDIENTS_RECETTE_MESSAGES = [
+exports.RECIPE_INGREDIENTS_MESSAGES = [
     "Pour cela il vous faut {ingredients}. La recette est disponible sur votre application!",
     "Alors préparez {ingredients}. Si besoin, je vous ai envoyé la recette sur votre application!",
     "Rassemblez {ingredients}. La recette a été envoyé sur votre application."
 ];
-exports.RECETTE_SPECIFIQUE_MESSAGES = [
+exports.SPECIFIC_RECIPE_MESSAGES = [
     "C'est parti pour {nom}!",
     "{nom}? J'adore!",
     "Rien de tel qu'une boisson telle que {nom} pour être en forme!",
     "Bon choix, j'aimerais boire {nom} moi aussi!"
 ];
-exports.NOMBRE_RECETTE_MESSAGES = [
+exports.NUMBER_OF_RECIPES_MESSAGES = [
     "Je connais {} recettes.",
     "Je connais {} recettes, c'est un bon début!",
     "Je connais {} recettes, et je ne compte pas m'arrêter là!",

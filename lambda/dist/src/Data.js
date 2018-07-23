@@ -14,9 +14,9 @@ exports.RECIPE_STEPS = {
     'doppio': 'le double expresso nécessite 60 à 80 ml d\'eau et une double dose de café moulu soit 14g, ce n\'est pas un expresso que l\'on fait couler plus longtemps pour avoir une tasse plus remplie, c\'est simplement deux expressos réunis dans une tasse.  \Si vous le faites avec un porte-filtre avec deux becs d\'écoulement en plaçant la tasse bien au centre, le temps d\'extraction sera autour de 25 à 30 secondes.'
 };
 exports.RECIPE_INGREDIENTS = {
-    'expresso': '7 grammes de café moulu et 40 millilitres d\'eau',
-    'lungo': '7 grammes de café moulu et 80 millilitres d\'eau',
-    'ristretto': '7 grammes de café moulu et 25 millilitres d\'eau',
-    'doppio': '14 grammes de café moulu et 80 millilitres d\'eau'
+    'expresso': '7 grammes de café moulu, 40 millilitres d\'eau',
+    'lungo': '7 grammes de café moulu, 80 millilitres d\'eau',
+    'ristretto': '7 grammes de café moulu, 25 millilitres d\'eau',
+    'doppio': '14 grammes de café moulu, 80 millilitres d\'eau'
 };
 //# sourceMappingURL=Data.js.map

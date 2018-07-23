@@ -1,17 +1,17 @@
 import { LilaIntentHandler } from 'skill-lilasoft-toolkit';
 import { assert } from "chai";
-import { SUGGESTION_RECETTE_MESSAGES, INGREDIENTS_RECETTE_MESSAGES } from "../../src/Constants";
-import { NumberOfRecipesIntentHandler } from "../../src/IntentHandlers";
-import { RECETTE_SPECIFIQUE_INTENT } from '../../src/Intents';
+import { RECIPE_SUGGESTION_MESSAGES, RECIPE_INGREDIENTS_MESSAGES } from "../../src/Constants";
+import { RecipeIntentHandler } from "../../src/IntentHandlers";
+import { SPECIFIC_RECIPE_INTENT } from '../../src/Intents';
 
-describe("NumberOfRecipesIntentHandler", () => {
+describe("RecipeIntentHandler", () => {
     describe("constructor", () => {
         it("it calls super() with correct parameters", () => {
-            const handler = new NumberOfRecipesIntentHandler();
+            const handler = new RecipeIntentHandler();
             const intentHandler = <LilaIntentHandler>handler;
-            assert.equal(intentHandler.intentName, RECETTE_SPECIFIQUE_INTENT);
-            assert.equal(intentHandler.messages, SUGGESTION_RECETTE_MESSAGES);
-            assert.equal(intentHandler.reprompts, INGREDIENTS_RECETTE_MESSAGES);
+            assert.equal(intentHandler.intentName, SPECIFIC_RECIPE_INTENT);
+            assert.equal(intentHandler.messages, RECIPE_SUGGESTION_MESSAGES);
+            assert.equal(intentHandler.reprompts, RECIPE_INGREDIENTS_MESSAGES);
         });
     });
 });

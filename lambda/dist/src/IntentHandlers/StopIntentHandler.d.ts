@@ -1,4 +1,4 @@
-import { LilaRequestHandler } from "../../../../skill-lilasoft-toolkit/dist/src";
-export default class CancelIntentHandler extends LilaRequestHandler {
+import { LilaIntentHandler } from "skill-lilasoft-toolkit";
+export default class StopIntentHandler extends LilaIntentHandler {
     constructor();
 }

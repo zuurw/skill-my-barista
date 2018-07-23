@@ -3,7 +3,7 @@ import { assert } from "chai";
 import { HELP_MESSAGES, HELP_REPROMPTS } from "../../src/Constants";
 import { HelpIntentHandler } from "../../src/IntentHandlers";
 
-describe("CancelIntentHandler", () => {
+describe("HelpIntentHandler", () => {
     describe("constructor", () => {
         it("it calls super() with correct parameters", () => {
             const handler = new HelpIntentHandler();

@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const Intents_1 = require("../Intents");
 const Constants_1 = require("../Constants");
-const intents_1 = require("../intents");
-const src_1 = require("../../../../skill-lilasoft-toolkit/dist/src");
-class RecipeIntentHandler extends src_1.LilaRequestHandler {
+const skill_lilasoft_toolkit_1 = require("skill-lilasoft-toolkit");
+class RecipeIntentHandler extends skill_lilasoft_toolkit_1.LilaIntentHandler {
     constructor() {
-        super(intents_1.RECETTE_SPECIFIQUE_INTENT, Constants_1.SUGGESTION_RECETTE_MESSAGES, Constants_1.INGREDIENTS_RECETTE_MESSAGES);
+        super(Intents_1.SPECIFIC_RECIPE_INTENT, Constants_1.RECIPE_SUGGESTION_MESSAGES, Constants_1.RECIPE_INGREDIENTS_MESSAGES);
     }
 }
 exports.default = RecipeIntentHandler;
