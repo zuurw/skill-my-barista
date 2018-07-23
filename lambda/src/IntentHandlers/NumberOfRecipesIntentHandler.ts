@@ -1,9 +1,9 @@
-import { NOMBRE_RECETTE_MESSAGES } from "../Constants";
-import { NOMBRE_RECETTE_INTENT } from "../intents";
-import { LilaRequestHandler } from "../../../../skill-lilasoft-toolkit/dist/src";
+import { NUMBER_OF_RECIPES_MESSAGES } from "../Constants";
+import { NUMBER_OF_RECIPES_INTENT } from "../Intents";
+import { LilaIntentHandler } from "skill-lilasoft-toolkit";
 
-export default class NumberOfRecipesIntentHandler extends LilaRequestHandler {   
+export default class NumberOfRecipesIntentHandler extends LilaIntentHandler {   
     constructor() {
-        super(NOMBRE_RECETTE_INTENT, NOMBRE_RECETTE_MESSAGES, null);
+        super(NUMBER_OF_RECIPES_INTENT, NUMBER_OF_RECIPES_MESSAGES, null);
     }
 };

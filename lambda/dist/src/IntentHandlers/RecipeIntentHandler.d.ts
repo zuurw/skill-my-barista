@@ -1,4 +1,4 @@
-import { LilaRequestHandler } from "../../../../skill-lilasoft-toolkit/dist/src";
-export default class RecipeIntentHandler extends LilaRequestHandler {
+import { LilaIntentHandler } from "skill-lilasoft-toolkit";
+export default class RecipeIntentHandler extends LilaIntentHandler {
     constructor();
 }

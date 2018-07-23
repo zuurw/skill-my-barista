@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 require("mocha");
 const chai_1 = require("chai");
 const Constants_1 = require("../src/Constants");
-describe('skill-coffee-recipes Test - Constants', () => {
+describe('Constants', () => {
     it('Constants SKILL_NAME must be defined', () => {
         chai_1.expect(Constants_1.SKILL_NAME).to.not.be.undefined;
     });

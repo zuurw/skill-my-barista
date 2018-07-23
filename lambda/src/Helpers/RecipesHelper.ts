@@ -5,19 +5,15 @@ import { MessagesHelper } from 'skill-lilasoft-toolkit';
 export default class RecipesHelper {
     messagesHelper: MessagesHelper;
 
-    constructor() {
-        this.messagesHelper = new MessagesHelper();
+    constructor(messagesHelper?: MessagesHelper) {
+        this.messagesHelper = (messagesHelper !== undefined) ? messagesHelper : new MessagesHelper();
     }
 
     public getRandomRecipe(): Recipe {
         const recipeName = this.messagesHelper.getRandomMessage(Object.keys(RECIPE_NAMES));
-        return this.getRecette(recipeName);
+        return this.getRecipe(recipeName);
     };
-    public getRecette(recipeName: string): Recipe {
-        let recipe = new Recipe();
-        recipe.name = RECIPE_NAMES[recipeName];
-        recipe.ingredients = RECIPE_INGREDIENTS[recipeName];
-        recipe.steps = RECIPE_STEPS[recipeName];
-        return recipe;
+    public getRecipe(recipeName: string): Recipe {
+        return new Recipe(RECIPE_NAMES[recipeName], RECIPE_INGREDIENTS[recipeName], RECIPE_STEPS[recipeName]);
     };
 };

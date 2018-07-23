@@ -1,3 +1,3 @@
-export declare const SUGGESTION_RECETTE_INTENT = "SuggestionRecetteIntent";
-export declare const RECETTE_SPECIFIQUE_INTENT = "RecetteSpecifiqueIntent";
-export declare const NOMBRE_RECETTE_INTENT = "NombreRecetteIntent";
+export declare const RECIPE_SUGGESTION_INTENT = "RecipeSuggestionIntent";
+export declare const SPECIFIC_RECIPE_INTENT = "SpecificRecipeIntent";
+export declare const NUMBER_OF_RECIPES_INTENT = "NumberOfRecipesIntent";

@@ -23,23 +23,23 @@ export const WELCOME_REPROMPTS = [
 export const HELP_MESSAGES = ["Voici l'aide"];
 export const HELP_REPROMPTS = ["Cela vous convient?"];
 export const EXIT_MESSAGES = ["Au revoir!", "Bonne journée!"];
-export const SUGGESTION_RECETTE_MESSAGES = [
+export const RECIPE_SUGGESTION_MESSAGES = [
   "Que diriez vous de faire {nom}?",
   "{nom}, ça vous dit?",
   "{nom} m'inspire aujourd'hui, pas vous?"
 ];
-export const INGREDIENTS_RECETTE_MESSAGES = [
+export const RECIPE_INGREDIENTS_MESSAGES = [
   "Pour cela il vous faut {ingredients}. La recette est disponible sur votre application!",
   "Alors préparez {ingredients}. Si besoin, je vous ai envoyé la recette sur votre application!",
   "Rassemblez {ingredients}. La recette a été envoyé sur votre application."
 ];
-export const RECETTE_SPECIFIQUE_MESSAGES = [
+export const SPECIFIC_RECIPE_MESSAGES = [
   "C'est parti pour {nom}!",
   "{nom}? J'adore!",
   "Rien de tel qu'une boisson telle que {nom} pour être en forme!",
   "Bon choix, j'aimerais boire {nom} moi aussi!"
 ];
-export const NOMBRE_RECETTE_MESSAGES = [
+export const NUMBER_OF_RECIPES_MESSAGES = [
   "Je connais {} recettes.",
   "Je connais {} recettes, c'est un bon début!",
   "Je connais {} recettes, et je ne compte pas m'arrêter là!",

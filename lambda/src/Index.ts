@@ -8,7 +8,8 @@ import {
   SessionEndedRequestHandler
 } from "./Handlers";
 import {
-  CancelAndStopIntentHandler,
+  CancelIntentHandler,
+  StopIntentHandler,
   HelpIntentHandler,
   NumberOfRecipesIntentHandler,
   RecipeIntentHandler,
@@ -25,7 +26,8 @@ export async function handler(
     .addRequestHandlers(
       new LaunchRequestHandler(),
       new HelpIntentHandler(),
-      new CancelAndStopIntentHandler(),
+      new CancelIntentHandler(),
+      new StopIntentHandler(),
       new SessionEndedRequestHandler(),
       new RecipeSuggestionIntentHandler(),
       new RecipeIntentHandler(),
