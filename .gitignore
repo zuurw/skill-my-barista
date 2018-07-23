@@ -1,0 +1,3 @@
+lambda/coverage/
+lambda/node_modules/
+lambda/.nyc_output/
