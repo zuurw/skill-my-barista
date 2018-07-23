@@ -1,9 +1,9 @@
-import { SUGGESTION_RECETTE_INTENT } from "../intents";
-import { SUGGESTION_RECETTE_MESSAGES, INGREDIENTS_RECETTE_MESSAGES } from "../Constants";
+import { RECIPE_SUGGESTION_INTENT } from "../intents";
+import { RECIPE_SUGGESTION_MESSAGES, RECIPE_INGREDIENTS_MESSAGES } from '../Constants';
 import { LilaIntentHandler } from "skill-lilasoft-toolkit";
 
 export default class RecipeSuggestionIntentHandler extends LilaIntentHandler {   
     constructor() {
-        super(SUGGESTION_RECETTE_INTENT, SUGGESTION_RECETTE_MESSAGES, INGREDIENTS_RECETTE_MESSAGES);
+        super(RECIPE_SUGGESTION_INTENT, RECIPE_SUGGESTION_MESSAGES, RECIPE_INGREDIENTS_MESSAGES);
     }
 };
