@@ -12,3 +12,13 @@ script:
 
 # Send coverage data to Coveralls
 after_script: "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
+
+deploy:
+  provider: lambda
+  function_name: "skill-my-barista"
+  region: "us-east-1"
+  role: "arn:aws:lambda:us-east-1:352194809061:function:ask-custom-skill-coffee-recipes-default"
+  runtime: "nodejs8.10"
+  handler_name: "handler"
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
