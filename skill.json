@@ -21,7 +21,15 @@
     "apis": {
       "custom": {
         "endpoint": {
-          "sourceDir": "lambda"
+          "uri": "arn:aws:lambda:us-east-1:352194809061:function:skill-my-barista"
+        },
+        "interfaces": [],
+        "regions": {
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:352194809061:function:skill-my-barista"
+            }
+          }
         }
       }
     },

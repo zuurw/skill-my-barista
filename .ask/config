@@ -6,17 +6,13 @@
       "merge": {
         "manifest": {
           "apis": {
-            "custom": {
-              "endpoint": {
-                "uri": "ask-custom-skill-coffee-recipes-default"
-              }
-            }
+            "custom": {}
           }
         }
       },
       "resources": {
         "manifest": {
-          "eTag": "ae0870e3563dbac40aff6d942ad95571"
+          "eTag": "0b63bdbde7684a82109afa7836deb22a"
         },
         "interactionModel": {
           "en-US": {
@@ -28,8 +24,8 @@
         },
         "lambda": [
           {
-            "arn": "arn:aws:lambda:us-east-1:352194809061:function:ask-custom-skill-coffee-recipes-default",
-            "functionName": "ask-custom-skill-coffee-recipes-default",
+            "arn": "arn:aws:lambda:us-east-1:352194809061:function:skill-my-barista",
+            "functionName": "skill-my-barista",
             "awsRegion": "us-east-1",
             "alexaUsage": [
               "custom/default"
