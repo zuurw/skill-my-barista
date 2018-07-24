@@ -17,7 +17,7 @@ deploy:
   provider: lambda
   function_name: "skill-my-barista"
   region: "us-east-1"
-  role: "arn:aws:iam::352194809061:role/service-role/code-build-skill-coffee-recipes-codebuild-service-role"
+  role: "arn:aws:iam::352194809061:role/lilasoft-lambda"
   runtime: "nodejs8.10"
   handler_name: "handler"
   access_key_id: $AWS_ACCESS_KEY_ID
