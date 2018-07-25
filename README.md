@@ -1,3 +1,8 @@
+<p align="center">
+  <img width="400" height="171,021 " src="https://user-images.githubusercontent.com/40801473/43198245-dc572342-9005-11e8-86c1-c61b13e95849.png">
+</p>
+
+
 # 'My Barista' Skill
 
 [![Build Status](https://travis-ci.org/Beowulf59000/skill-my-barista.svg?branch=master)](https://travis-ci.org/Beowulf59000/skill-my-barista)
